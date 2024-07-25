@@ -23,6 +23,7 @@ const Home = () => {
         ></VibrationButton>
         {vibrationError && <VibrationNotWork/>}
         <SampleFooter/>
+        <h1>hahahaha</h1>
       </MainContainer>
     </>
   );
