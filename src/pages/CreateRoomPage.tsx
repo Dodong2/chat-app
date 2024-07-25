@@ -16,7 +16,7 @@ const CreateRoomPage = () => {
           <input type="text" placeholder="Room Name" required />
           <input type="text" placeholder="password" required />
           <button type="submit">Create</button>
-        </form>
+        </form><br/><br/>
         <IDinput
           otpDigits={otpDigits}
           inputRefs={inputRefs}
