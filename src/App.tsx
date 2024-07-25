@@ -1,4 +1,3 @@
-
 /********** react library **********/
 import { lazy, Suspense } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -17,7 +16,12 @@ function App() {
 
   //Pages
   // const User = lazy(() => import('./pages/User'))
-  const Home = lazy(() => import("./pages/Home"));
+  const Home = lazy(() => import("./pages/Home"))
+  const IntroductionPage = lazy(() => import("./pages/IntroductionPage"))
+  const SelectionPage = lazy(() => import("./pages/SelectionPage"))
+  const CreateRoomPage = lazy(() => import("./pages/CreateRoomPage"))
+  const JoinRoomPage = lazy(() => import("./pages/JoinRoomPages"))
+
   
 
   return (
@@ -25,8 +29,11 @@ function App() {
       <Router>
         <Suspense fallback={<>Loading...</>}>
           <Routes>
-            <Route path="/" element={<Home />} />
-            {/* <Route path="/" element={<User/>}/> */}
+            <Route path="/home" element={<Home />} />
+            <Route path="/" element={<IntroductionPage />} />
+            <Route path="/userselection" element={<SelectionPage />} />
+            <Route path="/create" element={<CreateRoomPage />} />
+            <Route path="/join" element={<JoinRoomPage />} />
           </Routes>
         </Suspense>
       </Router>
