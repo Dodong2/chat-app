@@ -11,18 +11,20 @@ const CreateRoomPage = () => {
   return (
     <>
       <CreateRoom>
-        <h1>Create Room</h1>
-        <form>
-          <input type="text" placeholder="Room Name" required />
-          <input type="text" placeholder="password" required />
-          <button type="submit">Create</button>
-        </form><br/><br/>
+        <h1>Create Room</h1><br/><br/>
+        <h1>Room ID</h1>
         <IDinput
           otpDigits={otpDigits}
           inputRefs={inputRefs}
           handleChange={handleChange}
           handleKeyDown={handleKeyDown}
         />
+        <form>
+          <input type="text" placeholder="Room Name" required />
+          <input type="text" placeholder="password" required />
+          <button type="submit">Create</button>
+        </form><br/><br/>
+        
         <Link to="/userselection">
         <button>back</button>
         </Link>

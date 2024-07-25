@@ -8,7 +8,7 @@ const JoinRoomPages = () => {
       <JoinRoom>
         <h1>Join Room</h1>
         <form>
-          <input type="text" placeholder="Room" required />
+          <input type="text" placeholder="Room ID" required />
           <input type="text" placeholder="password" required />
           <button type="submit">Enter</button>
         </form>
