@@ -1,11 +1,12 @@
 interface JoinRoomProps {
     children: React.ReactNode
+    ClassStyle: string
 }
 
-const JoinRoom: React.FC<JoinRoomProps> = ({ children }) => {
+const JoinRoom: React.FC<JoinRoomProps> = ({ children, ClassStyle }) => {
   return (
     <>
-      <div>
+      <div className={ClassStyle}>
         {children}
       </div>
     </>
