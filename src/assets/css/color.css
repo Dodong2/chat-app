@@ -1,30 +1,15 @@
 /*--------------------(  Colors CSS  )--------------------*/
 :root {
     /* Primary colors */
-  --primary-color-light: #5dade2;
-  --primary-color: #3498db;
-  --primary-color-dark: #2e86c1;
-  --primary-color-red: rgb(255, 37, 37);
+    --primary: #06283D;
+    --secondary: #256D85;
+    --tertiary: #D0D0D0;
+    --white: #FFFFFF;
+    --black: #000000;
+    --gray: #EFEFEF;
+    --shadow: #F6F6F6;
+    --primary-color-light: #3498db;
 
-  /* Secondary colors */
-  --secondary-color-light: #58d68d;
-  --secondary-color: #2ecc71;
-  --secondary-color-dark: #28b463;
-  
-   /* Text colors */
-   --primary-text-color: #333333;
-   --secondary-text-color: #666666;
-   --primary-text-light: #ffffff;
-   
-   /* Brand colors */
-   --brand-primary: #3498db;
-   --brand-secondary: #2ecc71;
-   --brand-danger: #e74c3c;
-   --brand-warning: #f1c40f;
-   
-   /* Button colors */
-   --button-primary-bg: var(--brand-primary);
-   --button-primary-text: #ffffff;
-   --button-secondary-bg: var(--brand-secondary);
-   --button-secondary-text: #ffffff;
+    /* Text colors */
+   --primary-text-color:#3498db;
 }

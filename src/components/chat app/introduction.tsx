@@ -1,12 +1,13 @@
 interface IntroductionProps {
     children: React.ReactNode
+    ClassStyle: string
 }
 
 
-const introduction: React.FC<IntroductionProps> = ({ children }) => {
+const introduction: React.FC<IntroductionProps> = ({ children, ClassStyle }) => {
   return (
     <>
-      <div>
+      <div className={ClassStyle}>
         {children}
       </div>
     </>

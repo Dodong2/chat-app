@@ -8,6 +8,9 @@ import './assets/css/App.css'
 import './assets/css/color.css'
 import './assets/css/default.css'
 import './assets/css/media.css'
+/********** Components **********/
+import MainContainer from "./components/common/MainContainer";
+
 
 
 
@@ -21,6 +24,7 @@ function App() {
   const SelectionPage = lazy(() => import("./pages/SelectionPage"))
   const CreateRoomPage = lazy(() => import("./pages/CreateRoomPage"))
   const JoinRoomPage = lazy(() => import("./pages/JoinRoomPages"))
+  
 
   
 
@@ -28,6 +32,7 @@ function App() {
     <>
       <Router>
         <Suspense fallback={<>Loading...</>}>
+        <MainContainer>
           <Routes>
             <Route path="/home" element={<Home />} />
             <Route path="/" element={<IntroductionPage />} />
@@ -35,6 +40,7 @@ function App() {
             <Route path="/create" element={<CreateRoomPage />} />
             <Route path="/join" element={<JoinRoomPage />} />
           </Routes>
+          </MainContainer>
         </Suspense>
       </Router>
     </>
