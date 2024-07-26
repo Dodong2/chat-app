@@ -103,7 +103,7 @@
   top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 500px;
+  width: 100%;
 }
 .selection h1 {
   text-align: center;
@@ -114,7 +114,7 @@
 .selection p {
   text-align: center;
   font-family: "poppins-bold";
-  font-size: clamp(.8em, 2vw + 1em, 1em);
+  font-size: clamp(.8em, 2vw + 1em, .8em);
   color: var(--primary-text-color);
 }
 .selection .selection-buttons {
