@@ -1,11 +1,12 @@
 interface SelectionProps {
     children: React.ReactNode
+    ClassStyle: string
 }
 
-const Selection: React.FC<SelectionProps> = ({ children }) => {
+const Selection: React.FC<SelectionProps> = ({ children, ClassStyle }) => {
   return (
     <>
-      <div>
+      <div className={ClassStyle}>
         {children}
       </div>
     </>

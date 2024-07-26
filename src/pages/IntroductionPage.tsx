@@ -13,7 +13,7 @@ const IntroductionPage = () => {
           <h1>CHAT-APP</h1>
           <p>Stay connected, stay close.</p>
         </div>
-        <div>
+        <div className="introduction-banner">
           <img src={IntroductionBanner} alt="banner" />
         </div>
         <div className='continue'>
