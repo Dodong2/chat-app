@@ -12,6 +12,7 @@ const IdInput: React.FC<OtpInputProps> = ({ otpDigits, inputRefs, handleChange, 
     <div className='input-id'>
       {otpDigits.map((digit, index) => (
         <input
+        type='number'
           className='id-number'
            required
           key={index}
