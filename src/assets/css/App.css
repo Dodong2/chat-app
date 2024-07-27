@@ -10,16 +10,10 @@
   overflow: hidden;
   display: grid;
   place-content: center;
-  height: 600px;
 }
 .header {
-  position: absolute;
-  top: 5%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   margin-top: 70px;
   text-align: center;
-  width: 100%;
 }
 .header h1 {
   font-family: "chat";
@@ -34,12 +28,13 @@
   font-weight: 900;
   color: var(--primary-text-color);
 }
+
 .introduction .introduction-banner {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 300px;
+  margin: auto;
+  border-radius: 5px;
+  height: 250px;
+  width: 250px;
+  overflow: hidden;
 }
 .introduction .introduction-banner img {
   width: 100%;
@@ -52,10 +47,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  top: 85%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 .continue button {
   width: 300px;
@@ -83,14 +74,15 @@
   position: relative;
   overflow: hidden;
   text-align: center;
-  height: 600px;
+  margin-top: 10px;
 }
+
 .selection .selection-banner {
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 300px;
+  margin: auto;
+  border-radius: 5px;
+  height: 250px;
+  width: 250px;
+  overflow: hidden;
 }
 .selection .selection-banner img {
   width: 100%;
@@ -98,13 +90,7 @@
   margin: auto;
   object-fit: cover;
 }
-.selection .selection-text {
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-}
+
 .selection h1 {
   text-align: center;
   font-family: "poppins-bold";
@@ -118,14 +104,11 @@
   color: var(--primary-text-color);
 }
 .selection .selection-buttons {
-  position: absolute;
-  top: 85%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   display: grid;
   place-content: center;
   gap: 25px;
   width: 100%;
+  margin-top: 50px;
 }
 .selection .selection-buttons button {
   width: 300px;
