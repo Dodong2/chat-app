@@ -9,9 +9,11 @@ interface OtpInputProps {
 
 const IdInput: React.FC<OtpInputProps> = ({ otpDigits, inputRefs, handleChange, handleKeyDown }) => {
   return (
-    <div>
+    <div className='input-id'>
       {otpDigits.map((digit, index) => (
         <input
+          className='id-number'
+           required
           key={index}
           maxLength={1}
           value={digit}
