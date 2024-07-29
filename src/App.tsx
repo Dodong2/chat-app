@@ -23,7 +23,7 @@ function App() {
   const SelectionPage = lazy(() => import("./pages/SelectionPage"))
   const CreateRoomPage = lazy(() => import("./pages/CreateRoomPage"))
   const JoinRoomPage = lazy(() => import("./pages/JoinRoomPages"))
-  
+  const UserNamePage = lazy(() => import("./pages/UserNamepage"))
 
   
 
@@ -37,6 +37,7 @@ function App() {
             <Route path="/userselection" element={<SelectionPage />} />
             <Route path="/create" element={<CreateRoomPage />} />
             <Route path="/join" element={<JoinRoomPage />} />
+            <Route path="/username" element={<UserNamePage />} />
           </Routes>
         </Suspense>
       </Router>

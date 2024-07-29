@@ -7,24 +7,28 @@ const JoinRoom: React.FC = () => {
   return (
     <>
       <div className="joinroom">
-      <div className="back">
+        <div className="back">
           <Link to="/userselection">
-            <button><MdOutlineKeyboardBackspace /></button>
+            <button>
+              <MdOutlineKeyboardBackspace />
+            </button>
           </Link>
         </div>
         <div className="join-text">
           <h1>Join Room</h1>
         </div>
         <div className="joinroom-inputs">
-        <form>
-          <input type="text" placeholder="Room ID" required />
-          <input type="text" placeholder="password" required />
-          <button type="submit">Enter</button>
-        </form>
+          <form>
+            <input type="text" placeholder="Room ID" required />
+            <input type="text" placeholder="password" required />
+            <Link to="/username">
+              <button type="submit">Enter</button>
+            </Link>
+          </form>
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default JoinRoom
+export default JoinRoom;

@@ -1,7 +1,7 @@
 /********** react library **********/
 import { Link } from "react-router-dom";
-/********** Icons **********/
-import CreateBanner from '../../assets/svg/create-banner.svg'
+/********** SVG **********/
+import CreateBanner from "../../assets/svg/create-banner.svg";
 /********** Icons **********/
 import { MdOutlineKeyboardBackspace } from "react-icons/md";
 /********** Components **********/
@@ -25,7 +25,7 @@ const CreateRoom: React.FC = () => {
           <h1>Create Room</h1>
         </div>
         <div className="create-banner">
-          <img src={CreateBanner} alt="CreateBanner"/>
+          <img src={CreateBanner} alt="CreateBanner" />
         </div>
         <form>
           <div className="createroom-input-id">
@@ -40,7 +40,9 @@ const CreateRoom: React.FC = () => {
           <div className="createroom-input">
             <input type="text" placeholder="Room Name" required />
             <input type="text" placeholder="password" required />
-            <button type="submit">Create</button>
+            <Link to="/username">
+              <button type="submit">Create</button>
+            </Link>
           </div>
         </form>
       </div>
