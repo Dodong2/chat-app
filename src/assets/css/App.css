@@ -59,6 +59,7 @@
   border-radius: 20px;
   color: var(--white);
   background-color: var(--primary-color-light);
+  cursor: pointer;
 }
 .continue button:hover {
   transition: all ease 0.3s;
@@ -122,6 +123,7 @@
   color: var(--white);
   background-color: var(--primary-color-light);
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  cursor: pointer;
 }
 
 .selection .selection-buttons button:hover {
@@ -151,6 +153,7 @@
   border-radius: 5px;
   color: var(--white);
   background-color: var(--primary-color-light);
+  cursor: pointer;
 }
 
 .joinroom .back button:hover {
@@ -217,6 +220,7 @@
   border-radius: 20px;
   color: var(--white);
   background-color: var(--primary-color-light);
+  cursor: pointer;
 }
 
 .joinroom .joinroom-inputs form button:hover {
@@ -237,8 +241,8 @@
 .createroom .create-banner {
   margin: auto;
   border-radius: 5px;
-  height: 150px;
-  width: 150px;
+  height: 170px;
+  width: 170px;
   overflow: hidden;
 }
 
@@ -259,6 +263,7 @@
   border-radius: 5px;
   color: var(--white);
   background-color: var(--primary-color-light);
+  cursor: pointer;
 }
 
 .createroom .createroom-text {
@@ -303,7 +308,7 @@
   border: 1px solid var(--primary-color-light);
   border-radius: 10px;
   padding: 10px;
-  width: 200px;
+  width: 250px;
   font-size: clamp(1.3em, 2vw + 1em, 1em);
   font-weight: bold;
   outline: none;
@@ -326,6 +331,7 @@
   border-radius: 20px;
   color: var(--primary-text-color);
   background-color: var(--white);
+  cursor: pointer;
 }
 .createroom form .createroom-input button:hover {
   transition: all ease 0.3s;
@@ -441,6 +447,7 @@
   border-radius: 20px;
   color: var(--white);
   background-color: var(--primary-color-light);
+  cursor: pointer;
 }
 
 .user-name .username-input form button:hover {
@@ -450,4 +457,9 @@
 
 .user-name .username-input form button:active {
   transform: scale(0.95);
+}
+.user-name .username-input form button:disabled {
+  /* Disabled Button Styles */
+  background-color: #cccccc;
+  cursor: not-allowed;
 }

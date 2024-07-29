@@ -21,11 +21,11 @@ const CreateRoom: React.FC = () => {
             </button>
           </Link>
         </div>
-        <div className="createroom-text">
-          <h1>Create Room</h1>
-        </div>
         <div className="create-banner">
           <img src={CreateBanner} alt="CreateBanner" />
+        </div>
+        <div className="createroom-text">
+          <h1>Create Room</h1>
         </div>
         <form>
           <div className="createroom-input-id">

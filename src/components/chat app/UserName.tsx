@@ -1,6 +1,8 @@
 import UserNameBanner from "../../assets/svg/username-banner.svg";
+import useInputValidation from "../../hooks/useInputValidation";
 
 const UserName = () => {
+  const { inputValue, isButtonDisabled, handleInputChange } = useInputValidation()
   return (
     <>
       <div className="user-name">
@@ -12,8 +14,8 @@ const UserName = () => {
         </div><br/>
         <div className="username-input">
           <form>
-            <input type="text" placeholder="Name" required />
-            <button type="submit">Enter</button>
+            <input type="text" value={inputValue} onChange={handleInputChange} placeholder="Name" required />
+            <button type="submit" disabled={isButtonDisabled}>Enter</button>
           </form>
         </div>
       </div>
