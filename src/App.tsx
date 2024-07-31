@@ -24,6 +24,7 @@ function App() {
   const CreateRoomPage = lazy(() => import("./pages/CreateRoomPage"))
   const JoinRoomPage = lazy(() => import("./pages/JoinRoomPages"))
   const UserNamePage = lazy(() => import("./pages/UserNamepage"))
+  const MessagingPage = lazy(() => import("./pages/MessagingPage"))
 
   
 
@@ -38,6 +39,7 @@ function App() {
             <Route path="/create" element={<CreateRoomPage />} />
             <Route path="/join" element={<JoinRoomPage />} />
             <Route path="/username" element={<UserNamePage />} />
+            <Route path="/chatpage" element={<MessagingPage />} />
           </Routes>
         </Suspense>
       </Router>

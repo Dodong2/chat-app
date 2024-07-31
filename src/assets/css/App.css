@@ -463,3 +463,64 @@
   background-color: #cccccc;
   cursor: not-allowed;
 }
+
+/********** Chat Page Conversation **********/
+.conversation {
+  flex-grow: 1;
+  padding: 20px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: auto;
+}
+
+.message {
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 60%;
+}
+
+.receiver {
+  align-self: flex-start;
+  background-color: #333;
+  color: #FFBF00;
+}
+
+.sender {
+  align-self: flex-end;
+  background-color: #007BFF;
+  color: white;
+}
+
+.input-area {
+  padding: 20px;
+  background-color: #555;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.input-text {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: none;
+  outline: none;
+}
+
+.send-button {
+  background-color: #007BFF;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.send-button:hover {
+  background-color: #0056b3;
+}

@@ -1,3 +1,6 @@
+/********** react library **********/
+import { Link } from "react-router-dom";
+/********** Components **********/
 import UserNameBanner from "../../assets/svg/username-banner.svg";
 import useInputValidation from "../../hooks/useInputValidation";
 
@@ -15,7 +18,7 @@ const UserName = () => {
         <div className="username-input">
           <form>
             <input type="text" value={inputValue} onChange={handleInputChange} placeholder="Name" required />
-            <button type="submit" disabled={isButtonDisabled}>Enter</button>
+            <Link to="/chatpage"><button type="submit" disabled={isButtonDisabled}>Enter</button></Link>
           </form>
         </div>
       </div>
