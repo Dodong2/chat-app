@@ -13,7 +13,7 @@ const Conversation = () => {
         <p>This is the receiver's message.</p>
       </div>
       <div className="input-area">
-      <textarea rows={1} placeholder="Enter text" class="input-text"></textarea>
+      <textarea rows={1} placeholder="Enter text" className="input-text"></textarea>
       <button className="send-button">Send</button>
     </div>
       </div>
