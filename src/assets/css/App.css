@@ -468,11 +468,11 @@
 .conversation {
   flex-grow: 1;
   padding: 20px;
-  margin-top: 20px;
   display: flex;
   flex-direction: column;
   gap: 10px;
   overflow-y: auto;
+  max-height: 640px;
 }
 
 .message {
@@ -480,18 +480,21 @@
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   max-width: 60%;
+  flex-shrink: 0;
 }
 
 .receiver {
   align-self: flex-start;
-  background-color: #333;
-  color: #FFBF00;
+  background-color: var(--primary);
+  color: var(--white);
+  font-family: "poppins-light";
 }
 
 .sender {
   align-self: flex-end;
-  background-color: #007BFF;
-  color: white;
+  background-color: var(--primary-color-light);
+  color: var(--white);
+  font-family: "poppins-light";
 }
 /********** Chat Page Input Area **********/
 .input-area {
@@ -499,7 +502,7 @@
   bottom: 0;
   left: 0;
   padding: 10px;
-  background-color: #555;
+  background-color: var(--primary-gray);
   display: flex;
   gap: 10px;
   align-items: center;
@@ -508,15 +511,21 @@
 
 .input-text {
   flex-grow: 1;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  padding: 5px 10px 5px 10px;
+  border-radius: 20px;
   resize: none;
   outline: none;
+  font-family: "poppins-light";
+  font-size: clamp(.2em, 2vw + 1em, 1em);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  background-color: var(--secondary-gray);
+  color: var(--white);
 }
 .send-button {
   background-color: transparent;
-  color: white;
+  color: var(--white);
   border: none;
   border-radius: 5px;
   cursor: pointer;
