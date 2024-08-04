@@ -511,7 +511,7 @@
 
 .input-text {
   flex-grow: 1;
-  padding: 5px 10px 5px 10px;
+  padding: 5px 10px 15px;
   border-radius: 20px;
   resize: none;
   outline: none;
@@ -522,6 +522,8 @@
   align-items: center;
   background-color: var(--secondary-gray);
   color: var(--white);
+  overflow-y: auto;
+  max-height: 100px;
 }
 .send-button {
   background-color: transparent;
