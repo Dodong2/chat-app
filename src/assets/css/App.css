@@ -493,13 +493,16 @@
   background-color: #007BFF;
   color: white;
 }
-
+/********** Chat Page Input Area **********/
 .input-area {
-  padding: 20px;
+  position: absolute;
+  top: 92%;
+  padding: 10px;
   background-color: #555;
   display: flex;
   gap: 10px;
   align-items: center;
+  width: 100%;
 }
 
 .input-text {
@@ -510,17 +513,22 @@
   resize: none;
   outline: none;
 }
-
 .send-button {
-  background-color: #007BFF;
+  background-color: transparent;
   color: white;
-  padding: 10px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  font-size: clamp(2em, 2vw + 1em, 2em);
 }
 
 .send-button:hover {
-  background-color: #0056b3;
+  transition: all ease 0.3s;
+  color: var(--primary-color-light);
+}
+
+.send-button:active {
+  transform: scale(0.95);
 }
