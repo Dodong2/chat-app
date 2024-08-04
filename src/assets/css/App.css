@@ -495,8 +495,9 @@
 }
 /********** Chat Page Input Area **********/
 .input-area {
-  position: absolute;
-  top: 92%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
   padding: 10px;
   background-color: #555;
   display: flex;
@@ -530,5 +531,5 @@
 }
 
 .send-button:active {
-  transform: scale(0.95);
+  transform: scale(0.50);
 }
