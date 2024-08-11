@@ -465,6 +465,9 @@
 }
 
 /********** Chat Page Conversation **********/
+.test {
+  position: relative;
+}
 .conversation {
   flex-grow: 1;
   padding: 20px;

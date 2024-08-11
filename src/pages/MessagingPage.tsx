@@ -5,8 +5,10 @@ import InputArea from '../components/chat app/chat page/InputArea'
 const MessagingPage = () => {
   return (
     <>
+    <div className="test">
       <Conversation />
       <InputArea/>
+      </div>
     </>
   )
 }
