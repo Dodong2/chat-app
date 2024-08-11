@@ -465,9 +465,6 @@
 }
 
 /********** Chat Page Conversation **********/
-.test {
-  position: relative;
-}
 .conversation {
   flex-grow: 1;
   padding: 20px;
@@ -475,7 +472,7 @@
   flex-direction: column;
   gap: 10px;
   overflow-y: auto;
-  max-height: 633px;
+  max-height: 631px;
 }
 
 .message {
