@@ -1,24 +1,9 @@
-import React, { useRef, useEffect } from 'react';
 import { PiImageSquareFill } from 'react-icons/pi';
 import { IoIosSend } from 'react-icons/io';
+import { useAutoResizeTextarea } from '../../../hooks/useAutoResizeTextarea'
 
 const YourComponent: React.FC = () => {
-  const textareaRef = useRef<HTMLTextAreaElement | null>(null);
-
-  const handleInput = () => {
-    const textarea = textareaRef.current;
-    if (textarea) {
-      textarea.style.height = 'auto'; // Reset height to auto
-      textarea.style.height = `${textarea.scrollHeight}px`; // Set height to scrollHeight
-    }
-  };
-
-  useEffect(() => {
-    const textarea = textareaRef.current;
-    if (textarea) {
-      handleInput(); // Adjust height on initial render
-    }
-  }, []);
+  const { textareaRef, handleInput } = useAutoResizeTextarea()
 
   return (
     <div className="input-area">
