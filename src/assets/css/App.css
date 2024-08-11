@@ -472,7 +472,8 @@
   flex-direction: column;
   gap: 10px;
   overflow-y: auto;
-  max-height: 610px;
+  max-height: 640px;
+  padding-bottom: 20px;
 }
 
 .message {
