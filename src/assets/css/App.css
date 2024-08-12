@@ -496,7 +496,10 @@
   flex-direction: column;
   gap: 10px;
   overflow-y: auto;
+  height: 100%;
   max-height: 640px;
+  border: 1px solid red;
+z-index: 100px;
 }
 
 .message {
@@ -518,6 +521,7 @@
   background-color: var(--primary);
   color: var(--white);
   font-family: "poppins-light";
+
 }
 
 .receiver-name {
@@ -544,6 +548,7 @@
   bottom: 0;
   left: 0;
   width: 100%;
+  z-index: -1;
 }
 
 .input-contents {
