@@ -61,12 +61,12 @@ const Conversation = () => {
         <p>receiver name</p>
       </div>
       <div className="message receiver">
-        <p>This is the receiver's message.</p>
+        <p>This is the receiver's message.dshnd,mshdm,shdm,sd,msndsmnds,mdnsdm,snd,mn</p>
       </div>
       </div>
       {/* sender message*/}
       <div className="message sender">
-        <p>This is the receiver's message.</p>
+        <p>This is the receiver's message.sashsdjamsdamnsdmnabdmnabdmnabdmansbdamnsdbmansbdamnsd</p>
       </div>
       </div>
     </>

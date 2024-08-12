@@ -7,15 +7,17 @@ const YourComponent: React.FC = () => {
 
   return (
     <div className="input-area">
-      <button className="send-button"><PiImageSquareFill /></button>
-      <textarea
-        ref={textareaRef}
-        rows={1}
-        placeholder="Enter text"
-        className="input-text"
-        onInput={handleInput}
-      ></textarea>
-      <button className="send-button"><IoIosSend /></button>
+      <div className="input-contents">
+        <button className="send-button"><PiImageSquareFill /></button>
+        <textarea
+          ref={textareaRef}
+          rows={1}
+          placeholder="Enter text"
+          className="input-text"
+          onInput={handleInput}
+        ></textarea>
+        <button className="send-button"><IoIosSend /></button>
+      </div>
     </div>
   );
 };

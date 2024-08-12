@@ -1,12 +1,15 @@
 /********** Components **********/
 import Conversation from "../components/chat app/chat page/Conversation"
 import InputArea from '../components/chat app/chat page/InputArea'
+import MessageContainer from "../components/chat app/chat page/MessageContainer"
 
 const MessagingPage = () => {
   return (
     <>
-      <Conversation />
-      <InputArea/>
+      <MessageContainer>
+        <Conversation />
+        <InputArea />
+      </MessageContainer>
     </>
   )
 }
