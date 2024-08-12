@@ -11,10 +11,12 @@
   display: grid;
   place-content: center;
 }
+
 .header {
   margin-top: 70px;
   text-align: center;
 }
+
 .header h1 {
   font-family: "chat";
   font-size: clamp(3.5em, 2vw + 1em, 1em);
@@ -36,18 +38,21 @@
   width: 250px;
   overflow: hidden;
 }
+
 .introduction .introduction-banner img {
   width: 100%;
   height: 100%;
   margin: auto;
   object-fit: cover;
 }
+
 .continue {
   margin-top: 25px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 .continue button {
   width: 300px;
   text-align: center;
@@ -61,10 +66,12 @@
   background-color: var(--primary-color-light);
   cursor: pointer;
 }
+
 .continue button:hover {
   transition: all ease 0.3s;
   background-color: var(--primary);
 }
+
 .continue button:active {
   transform: scale(0.95);
 }
@@ -85,6 +92,7 @@
   width: 250px;
   overflow: hidden;
 }
+
 .selection .selection-banner img {
   width: 100%;
   height: 100%;
@@ -98,12 +106,14 @@
   font-size: clamp(2em, 2vw + 1em, 1em);
   color: var(--primary-text-color);
 }
+
 .selection p {
   text-align: center;
   font-family: "poppins-bold";
   font-size: clamp(0.8em, 2vw + 1em, 0.8em);
   color: var(--primary-text-color);
 }
+
 .selection .selection-buttons {
   display: grid;
   place-content: center;
@@ -111,6 +121,7 @@
   width: 100%;
   margin-top: 50px;
 }
+
 .selection .selection-buttons button {
   width: 300px;
   text-align: center;
@@ -238,6 +249,7 @@
   position: relative;
   overflow: hidden;
 }
+
 .createroom .create-banner {
   margin: auto;
   border-radius: 5px;
@@ -304,6 +316,7 @@
   place-items: center;
   gap: 15px;
 }
+
 .createroom form .createroom-input input {
   border: 1px solid var(--primary-color-light);
   border-radius: 10px;
@@ -313,12 +326,14 @@
   font-weight: bold;
   outline: none;
 }
+
 .createroom form .createroom-input input:hover {
   transition: all ease 0.3s;
   border: 1px solid var(--white);
   background-color: var(--primary-color-light);
   color: var(--white);
 }
+
 .createroom form .createroom-input button {
   margin-top: 5px;
   width: 250px;
@@ -333,6 +348,7 @@
   background-color: var(--white);
   cursor: pointer;
 }
+
 .createroom form .createroom-input button:hover {
   transition: all ease 0.3s;
   background-color: var(--primary-color-light);
@@ -350,6 +366,7 @@
   justify-content: center;
   gap: 15px;
 }
+
 .input-id input {
   border: 1px solid var(--primary-color-light);
   border-radius: 10px;
@@ -360,6 +377,7 @@
   font-weight: bold;
   outline: none;
 }
+
 .input-id input:hover {
   transition: all ease 0.3s;
   border: 1px solid var(--white);
@@ -458,6 +476,7 @@
 .user-name .username-input form button:active {
   transform: scale(0.95);
 }
+
 .user-name .username-input form button:disabled {
   /* Disabled Button Styles */
   background-color: #cccccc;
@@ -468,12 +487,13 @@
 .conversation {
   flex-grow: 1;
   padding: 20px;
+  padding-bottom: 50px;
+  padding-top: 50px;
   display: flex;
   flex-direction: column;
   gap: 10px;
   overflow-y: auto;
   max-height: 640px;
-  padding-bottom: 50px;
 }
 
 .message {
@@ -481,6 +501,12 @@
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   max-width: 60%;
+  flex-shrink: 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.receiver-contents {
   flex-shrink: 0;
 }
 
@@ -491,12 +517,23 @@
   font-family: "poppins-light";
 }
 
+.receiver-name {
+  align-self: flex-start;
+}
+
+.receiver-name p {
+  color: var(--primary-text-color);
+  font-family: "poppins-light";
+  font-size: clamp(.8em, 2vw + 1em, .8em);
+}
+
 .sender {
   align-self: flex-end;
   background-color: var(--primary-color-light);
   color: var(--white);
   font-family: "poppins-light";
 }
+
 /********** Chat Page Input Area **********/
 .input-area {
   position: fixed;
@@ -526,6 +563,7 @@
   overflow-y: auto;
   max-height: 100px;
 }
+
 .send-button {
   background-color: transparent;
   color: var(--white);
