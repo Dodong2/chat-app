@@ -593,3 +593,39 @@
 .send-button:active {
   transform: scale(0.50);
 }
+
+/********** Chat Page Navbar **********/
+nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 5px;
+}
+
+.room-name {
+  justify-self: start;
+  align-self: center;
+  margin-left: 20px;
+}
+
+.room-name h1 {
+  font-family: 'poppins-bold';
+  font-size: clamp(1em, 2vw + 1em, 1.5em);
+  color: var(--primary-text-color);
+}
+
+.navbar-menu {
+  background-color: var(--primary-color-light);
+  color: var(--white);
+  font-size: clamp(1em, 2vw + 1em, 1em);
+  font-weight: 900;
+  justify-self: end;
+  align-self: center;
+  margin-right: 20px;
+  border-radius: 50%;
+  padding: 7px;
+}
+.navbar-menu h1 {
+  display: grid;
+  justify-self: center;
+  align-self: center;
+}
