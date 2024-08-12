@@ -498,8 +498,6 @@
   overflow-y: auto;
   height: 100%;
   max-height: 640px;
-  border: 1px solid red;
-z-index: 100px;
 }
 
 .message {
@@ -548,7 +546,6 @@ z-index: 100px;
   bottom: 0;
   left: 0;
   width: 100%;
-  z-index: -1;
 }
 
 .input-contents {
