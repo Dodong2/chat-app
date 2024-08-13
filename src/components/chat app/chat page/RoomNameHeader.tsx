@@ -1,6 +1,14 @@
-import { IoMenu } from "react-icons/io5";
+/********** Icons **********/
+import { FiMenu } from "react-icons/fi";
+import { IoClose } from 'react-icons/io5';
+/********** Hooks **********/
+import { useSidebar } from "../../../hooks/useSidebar";
+/********** Components **********/
+import Sidebar from './Sidebar'
 
 const RoomNameHeader = () => {
+  const { isOpen, toggleSidebar } = useSidebar()
+
   return (
     <>
       <nav>
@@ -8,7 +16,8 @@ const RoomNameHeader = () => {
             <h1>Room name</h1>
         </div>
         <div className="navbar-menu">
-            <h1><IoMenu/></h1>
+            <button onClick={toggleSidebar}>{ isOpen ? <IoClose/> : <FiMenu/>}</button> 
+            <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} />
         </div>
       </nav>
     </>
