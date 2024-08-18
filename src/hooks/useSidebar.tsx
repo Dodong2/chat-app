@@ -20,3 +20,4 @@ export const useSidebar = () => {
 
     return { isOpen, toggleSidebar };
 };
+

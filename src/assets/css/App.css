@@ -306,6 +306,23 @@
   margin: auto;
   text-align: center;
 }
+.createroom form .createroom-input-id input {
+  border: 1px solid var(--primary-color-light);
+  border-radius: 10px;
+  padding: 10px;
+  width: 250px;
+  font-size: clamp(1.3em, 2vw + 1em, 1em);
+  font-weight: bold;
+  outline: none;
+  text-align: center;
+}
+
+.createroom form .createroom-input-id input:hover {
+  transition: all ease 0.3s;
+  border: 1px solid var(--white);
+  background-color: var(--primary-color-light);
+  color: var(--white);
+}
 
 .createroom form .createroom-input-id h1 {
   font-family: "poppins-bold";
@@ -363,40 +380,73 @@
   transform: scale(0.95);
 }
 
-/********** ID inputs Components **********/
-.input-id {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
+/********** Room Information validation **********/
+.room-info {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 2;
 }
 
-.input-id input {
-  border: 1px solid var(--primary-color-light);
-  border-radius: 10px;
+.room-info {
+  opacity: 1;
+  visibility: visible;
+}
+
+.room-info-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--primary);
+  border: 2px solid var(--primary-gray);
+  padding: 14px 28px;
+  border-radius: 3px;
+  max-width: 400px;
+  min-width: 300px;
+  z-index: 20;
+  display: grid;
+  place-items: center;
+  gap: 10px;
+}
+
+.room-info-content h2 {
+  font-family: "poppins-bold";
+  font-weight: 900;
+  color: var(--primary-text-color);
+  font-size: clamp(2em, 2vw + 1em, 1em);}
+
+.room-info-content button {
+  margin-top: 5px;
+  width: 200px;
   text-align: center;
+  font-family: "poppins-bold";
+  font-size: 1.5em;
+  letter-spacing: 3px;
   padding: 10px;
-  width: 50px;
-  font-size: clamp(1.3em, 2vw + 1em, 1em);
-  font-weight: bold;
-  outline: none;
+  border: none;
+  border-radius: 20px;
+  color: var(--primary-text-color);
+  background-color: var(--white);
+  cursor: pointer;
 }
 
-.input-id input:hover {
+.room-info-content button:hover {
   transition: all ease 0.3s;
-  border: 1px solid var(--white);
   background-color: var(--primary-color-light);
   color: var(--white);
 }
 
-.id-number {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 20px;
-  text-align: center;
+.room-info-content button:active {
+  transform: scale(0.95);
 }
+
 
 /********** User Name **********/
 .user-name {
@@ -682,5 +732,4 @@ nav {
   opacity: 1;
   visibility: visible;
 }
-
 

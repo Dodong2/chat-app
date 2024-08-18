@@ -4,49 +4,59 @@ import { Link } from "react-router-dom";
 import CreateBanner from "../../assets/svg/create-banner.svg";
 /********** Icons **********/
 import { MdOutlineKeyboardBackspace } from "react-icons/md";
-/********** Components **********/
-import IDinput from "./id inputs/IdInput";
-import useInputId from "../../hooks/useInputId";
+/********** Hooks **********/
+import { useCreateRoom } from "../../hooks/useCreateRoom";
 
 const CreateRoom: React.FC = () => {
-  const { otpDigits, inputRefs, handleChange, handleKeyDown } = useInputId(4);
+
+  /********** onSubmit **********/
+  const { handleSubmit, roomData, error } = useCreateRoom();
+
+  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+    handleSubmit(formData);
+  };
 
   return (
-    <>
-      <div className="createroom">
-        <div className="back">
-          <Link to="/userselection">
-            <button>
-              <MdOutlineKeyboardBackspace />
-            </button>
-          </Link>
-        </div>
-        <div className="create-banner">
-          <img src={CreateBanner} alt="CreateBanner" />
-        </div>
-        <div className="createroom-text">
-          <h1>Create Room</h1>
-        </div>
-        <form>
-          <div className="createroom-input-id">
-            <h1>Room ID</h1>
-            <IDinput
-              otpDigits={otpDigits}
-              inputRefs={inputRefs}
-              handleChange={handleChange}
-              handleKeyDown={handleKeyDown}
-            />
-          </div>
-          <div className="createroom-input">
-            <input type="text" placeholder="Room Name" required />
-            <input type="text" placeholder="password" required />
-            <Link to="/username">
-              <button type="submit">Create</button>
-            </Link>
-          </div>
-        </form>
+    <div className="createroom">
+      <div className="back">
+        <Link to="/userselection">
+          <button>
+            <MdOutlineKeyboardBackspace />
+          </button>
+        </Link>
       </div>
-    </>
+      <div className="create-banner">
+        <img src={CreateBanner} alt="CreateBanner" />
+      </div>
+      <div className="createroom-text">
+        <h1>Create Room</h1>
+      </div>
+      <form onSubmit={onSubmit}>
+        <div className="createroom-input-id">
+          <h1>Room ID</h1>
+          <input type="number" name="room_id" placeholder="room Id" required />
+        </div>
+        <div className="createroom-input">
+          <input type="text" name="room_name" placeholder="Room Name" required />
+          <input type="text" name="password" placeholder="password" required />
+          <button type="submit">Create</button>
+        </div>
+      </form>
+      {/********** room information **********/}
+      {roomData && (
+          <div className="room-info">
+            <div className="room-info-content">
+            <h2>Room Created</h2>
+            <Link to="/username">
+            <button>Continue</button>
+            </Link>
+            </div>
+          </div>
+        )}
+        {error && <p className="error">{error}</p>}
+    </div>
   );
 };
 
