@@ -1,3 +1,4 @@
+/********** step 1 ng create room  **********/
 export const createRoom = async (formData: FormData) => {
   try {
     const response = await fetch('https://practice.mchaexpress.com/chat-app/api/room/create', {
