@@ -17,3 +17,24 @@ export const createRoom = async (formData: FormData) => {
     throw error;
   }
 };
+
+/********** step 1 ng Join room  **********/
+export const joinroom = async (formData: FormData) => {
+  try {
+    const response = await fetch('https://practice.mchaexpress.com/chat-app/api/room/join', {
+      method: 'POST',
+      body: formData
+    })
+
+    const data = await response.json()
+    
+    if(data.status === 'error') {
+      console.error(data.message)
+    }
+
+    return data
+  } catch (error) {
+    console.error('Error', error)
+    throw error
+  }
+}
