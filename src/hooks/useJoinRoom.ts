@@ -1,3 +1,4 @@
+/********** step 2 ng Join room  **********/
 import { useState } from "react";
 import { joinroom } from "../services/roomService";
 

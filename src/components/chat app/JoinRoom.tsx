@@ -1,5 +1,5 @@
 /********** react library **********/
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 /********** Icons **********/
 import { MdOutlineKeyboardBackspace } from "react-icons/md";
 /********** Hooks **********/
@@ -7,6 +7,8 @@ import { useJoinRoom } from "../../hooks/useJoinRoom";
 
 
 const JoinRoom: React.FC = () => {
+
+  /********** step 3 ng Join room  **********/
   const { handleSubmit, roomData, error } = useJoinRoom()
   // const navigate = useNavigate()
 
