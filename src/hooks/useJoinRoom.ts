@@ -1,20 +1,26 @@
 /********** step 2 ng Join room  **********/
-import { useState } from "react";
-import { joinroom } from "../services/roomService";
+import { useState } from 'react';
+import { joinroom } from '../services/roomService';
 
 export const useJoinRoom = () => {
-    const [roomData, setRoomData] = useState<{ room_id: string; password: string } | null>(null)
-    const [error, setError] = useState<string | null>(null)
+  const [isValid, setIsValid] = useState<boolean | null>(null);
+  const [error, setError] = useState<string | null>(null);
 
-    const handleSubmit = async (formData: FormData) => {
-        try {
-            const data = await joinroom(formData)
-            setRoomData(data) 
-        } catch (error){
-            setError('Failed join room')
-        }
+  const handleSubmit = async (formData: FormData) => {
+    try {
+      const data = await joinroom(formData);
+      // Perform validation check based on backend response
+      if (data.room_id && data.password) {
+        setIsValid(true);
+      } else {
+        setIsValid(false);
+        setError('Room not found or invalid credentials');
+      }
+    } catch (error) {
+      setIsValid(false);
+      setError('Failed to join room');
     }
+  };
 
-    return { handleSubmit, roomData, error }
-
-}
+  return { isValid, error, handleSubmit };
+};

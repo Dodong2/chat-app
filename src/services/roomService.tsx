@@ -6,7 +6,7 @@ export const createRoom = async (formData: FormData) => {
       body: formData,
     });
 
-    if (!response.ok) {
+    if (!response.status) {
       throw new Error('Failed to create room');
     }
 

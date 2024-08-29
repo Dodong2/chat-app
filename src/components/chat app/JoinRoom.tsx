@@ -1,5 +1,5 @@
 /********** react library **********/
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 /********** Icons **********/
 import { MdOutlineKeyboardBackspace } from "react-icons/md";
 /********** Hooks **********/
@@ -9,18 +9,18 @@ import { useJoinRoom } from "../../hooks/useJoinRoom";
 const JoinRoom: React.FC = () => {
 
   /********** step 3 ng Join room  **********/
-  const { handleSubmit, roomData, error } = useJoinRoom()
-  // const navigate = useNavigate()
+  const { handleSubmit, isValid, error } = useJoinRoom();
+  const navigate = useNavigate();
 
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    const formData = new FormData(e.currentTarget)
-    await handleSubmit(formData)
+    e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+    await handleSubmit(formData);
 
-    // if (roomData) {
-    //   navigate("/username")
-    // }
-  }
+    if (isValid) {
+      navigate('/username');
+    }
+  };
 
 
 
@@ -44,16 +44,6 @@ const JoinRoom: React.FC = () => {
               <button type="submit">Enter</button>
           </form>
         </div>
-        {roomData && (
-          <div className="room-info">
-            <div className="room-info-content">
-            <h2>Successfully joined</h2>
-            <Link to="/username">
-            <button>Continue</button>
-            </Link>
-            </div>
-          </div>
-        )}
         {error && <p className="error">{error}</p>}
       </div>
     </>
